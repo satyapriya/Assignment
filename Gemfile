@@ -24,6 +24,9 @@ group :assets do
   gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
   gem 'jquery-ui-rails'
 end
+group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+end
 
 gem 'will_paginate'
 gem 'jquery-rails'
