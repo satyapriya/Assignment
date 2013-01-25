@@ -1,0 +1,39 @@
+<%= form_for @question, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :question_info, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :question_info, :class => 'text_area',:rows=>5 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :difficulty, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :difficulty,[["Low","L"],["Medium","M"],["High","H"]], :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :importance, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :importance,(0..10).to_a, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :time_to_solve,"Time To Solve(in Mins)", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :time_to_solve,(0..59).to_a,:class => 'select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.radio_button :status, "Active",:class => 'radio' %> Active
+      <%= f.radio_button :status, "Inactive",:class => 'text_field' %>Inactive
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                questions_path, :class => 'btn' %>
+  </div>
+<% end %>

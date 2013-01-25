@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  question_info: MyText
+  difficulty: MyString
+  importance: 1
+  time_to_solve: 2013-01-25 15:27:37
+  status: MyString
+
+two:
+  question_info: MyText
+  difficulty: MyString
+  importance: 1
+  time_to_solve: 2013-01-25 15:27:37
+  status: MyString
